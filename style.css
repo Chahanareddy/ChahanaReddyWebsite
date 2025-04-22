@@ -368,7 +368,7 @@ top: 80px;
     background: #ff004f;
     transform:translateY(-10px);
 }
-
+  
 .projects-list .gamedev video {
     width: 100%;
     margin-top: 10px;
@@ -883,6 +883,33 @@ nav .fa-bars, nav .fa-times {
         cursor: pointer;
     }
 
+    
+  .progress-labels {
+    margin-top: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0%;
+    background-color: #ffd500; /* Yellow */
+    transition: width 1.5s ease;
+  }
+  
+  .progress.animate {
+    width: 100%;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #3a0057;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+
+  
     #projects {
         padding: 20px 0;
     }
@@ -962,40 +989,84 @@ nav .fa-bars, nav .fa-times {
     position: relative;
     z-index: 1;
 }
-
-.project-card {
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 600px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
+/* Updated Projects Section (Dropdown Style Full Row) */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    margin-bottom: 15px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-}
-
-
-.project-card .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
+    margin-top: 50px;
+    padding: 0 5%;
+  }
+  
+  .project-card.full-row {
+    width: 100%;
+    background: #380257;
+    border-radius: 10px;
+    padding: 20px 30px;
     color: white;
-    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
     cursor: pointer;
+  }
+  
+  .project-card.full-row:hover {
+    background: #ff004f;
+  }
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .dropdown-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .project-card.open .dropdown-icon {
+    transform: rotate(180deg);
+  }
+  
+  .project-content {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .project-card.open .project-content {
+    display: block;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card .tech-stack {
+    font-weight: bold;
+    color: #ffd500;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+  
+  .project-card a {
+    color: #ffffff;
     text-decoration: none;
-    background: linear-gradient(135deg, #ce71f0, #9900ff);
-    transition: all 0.3s ease-in-out;
-}
-
-.project-card .btn:hover {
-    background: linear-gradient(135deg, #a64dff, #8000ff);
-    transform: translateY(-3px);
-}
+    font-size: 14px;
+  }
+  
+  .project-card a:hover {
+    color: #0b03fc;
+  }  
