@@ -772,7 +772,7 @@ nav .fa-bars, nav .fa-times {
         max-width: none;
         position: absolute;
         left: 8%; /* Adjust horizontal positioning */
-        transform: translateY(75%);
+        transform: translateY(100%);
     }
 
     .header-text h1{
