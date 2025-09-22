@@ -1092,7 +1092,7 @@ nav .fa-bars, nav .fa-times {
     1200px 300px white, 1400px 500px white, 1600px 200px white,
     1800px 600px white, 200px 150px white, 400px 500px white,
     900px 300px white, 1100px 450px white, 1300px 700px white;
-  animation: drift1 100s linear infinite, twinkle 3s infinite ease-in-out;
+  animation: drift1 75s linear infinite, twinkle 2s infinite ease-in-out;
 }
 
 /* Layer 2 – medium stars */
@@ -1103,7 +1103,7 @@ nav .fa-bars, nav .fa-times {
     80px 150px white, 250px 300px white, 450px 600px white, 
     700px 200px white, 950px 500px white, 1250px 350px white,
     1450px 600px white, 1650px 400px white, 1850px 250px white;
-  animation: drift2 10s linear infinite, twinkle 4s infinite ease-in-out;
+  animation: drift2 10s linear infinite, twinkle 3s infinite ease-in-out;
 }
 
 /* Layer 3 – tiny stars */
@@ -1114,7 +1114,7 @@ nav .fa-bars, nav .fa-times {
     100px 200px white, 220px 400px white, 500px 350px white,
     750px 600px white, 1050px 250px white, 1350px 500px white,
     1550px 300px white, 1750px 550px white;
-  animation: drift3 200s linear infinite, twinkle 5s infinite ease-in-out;
+  animation: drift3 20s linear infinite, twinkle 4s infinite ease-in-out;
 }
 
 /* Drift animations – each layer moves differently */
