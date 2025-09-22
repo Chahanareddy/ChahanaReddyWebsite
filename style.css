@@ -1071,16 +1071,16 @@ nav .fa-bars, nav .fa-times {
     color: #0b03fc;
   }  
 
-  /* ✨ Twinkling Stars Background */
+  /* Stars bg */
 .stars, .stars2, .stars3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
+  width: 100%;   /* Full width of #header */
+  height: 100%;  /* Full height of #header */
   background-repeat: repeat;
-  background-size: contain;
-  z-index: 0;
+  background-size: cover; /* Spread evenly */
+  z-index: 0; /* Stay behind content */
 }
 
 .stars {
