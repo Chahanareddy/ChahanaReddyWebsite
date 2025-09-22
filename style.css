@@ -1091,8 +1091,12 @@ nav .fa-bars, nav .fa-times {
     radial-gradient(2px 2px at 30% 60%, white, transparent),
     radial-gradient(2px 2px at 60% 80%, white, transparent),
     radial-gradient(2px 2px at 80% 40%, white, transparent),
-    radial-gradient(2px 2px at 90% 70%, white, transparent);
-  animation: drift 80s linear infinite, twinkle 3s infinite ease-in-out;
+    radial-gradient(2px 2px at 90% 70%, white, transparent),
+    radial-gradient(2px 2px at 15% 85%, white, transparent),
+    radial-gradient(2px 2px at 45% 15%, white, transparent),
+    radial-gradient(2px 2px at 75% 50%, white, transparent),
+    radial-gradient(2px 2px at 50% 30%, white, transparent),
+    radial-gradient(2px 2px at 25% 45%, white, transparent);
 }
 
 /* Layer 2 – medium stars */
