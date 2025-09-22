@@ -1071,63 +1071,71 @@ nav .fa-bars, nav .fa-times {
     color: #0b03fc;
   }  
 
-  /* Stars bg */
-.stars, .stars2, .stars3 {
+  /* Stars bg *//* Generic starfield */
+.starfield {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: repeat;
-  background-size: cover;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
   z-index: 0;
-  animation: drift 60s linear infinite;
 }
 
-/* Layer 1 – bigger stars */
+/* Layer 1 – many large stars */
 .stars {
-  background-image: 
-    radial-gradient(2px 2px at 10% 20%, white, transparent),
-    radial-gradient(2px 2px at 30% 60%, white, transparent),
-    radial-gradient(2px 2px at 60% 80%, white, transparent),
-    radial-gradient(2px 2px at 80% 40%, white, transparent),
-    radial-gradient(2px 2px at 90% 70%, white, transparent),
-    radial-gradient(2px 2px at 15% 85%, white, transparent),
-    radial-gradient(2px 2px at 45% 15%, white, transparent),
-    radial-gradient(2px 2px at 75% 50%, white, transparent),
-    radial-gradient(2px 2px at 50% 30%, white, transparent),
-    radial-gradient(2px 2px at 25% 45%, white, transparent);
+  box-shadow: 
+    50px 100px white, 120px 200px white, 300px 400px white, 
+    600px 250px white, 800px 700px white, 1000px 120px white,
+    1200px 300px white, 1400px 500px white, 1600px 200px white,
+    1800px 600px white, 200px 150px white, 400px 500px white,
+    900px 300px white, 1100px 450px white, 1300px 700px white;
+  animation: drift1 60s linear infinite, twinkle 3s infinite ease-in-out;
 }
 
 /* Layer 2 – medium stars */
 .stars2 {
-  background-image: 
-    radial-gradient(1.5px 1.5px at 20% 30%, white, transparent),
-    radial-gradient(1.5px 1.5px at 40% 50%, white, transparent),
-    radial-gradient(1.5px 1.5px at 70% 90%, white, transparent),
-    radial-gradient(1.5px 1.5px at 85% 25%, white, transparent);
-  animation: drift 120s linear infinite, twinkle 4s infinite ease-in-out;
+  width: 1.5px;
+  height: 1.5px;
+  box-shadow: 
+    80px 150px white, 250px 300px white, 450px 600px white, 
+    700px 200px white, 950px 500px white, 1250px 350px white,
+    1450px 600px white, 1650px 400px white, 1850px 250px white;
+  animation: drift2 100s linear infinite, twinkle 4s infinite ease-in-out;
 }
 
 /* Layer 3 – tiny stars */
 .stars3 {
-  background-image: 
-    radial-gradient(1px 1px at 15% 10%, white, transparent),
-    radial-gradient(1px 1px at 35% 75%, white, transparent),
-    radial-gradient(1px 1px at 65% 50%, white, transparent),
-    radial-gradient(1px 1px at 95% 85%, white, transparent);
-  animation: drift 150s linear infinite, twinkle 5s infinite ease-in-out;
+  width: 1px;
+  height: 1px;
+  box-shadow: 
+    100px 200px white, 220px 400px white, 500px 350px white,
+    750px 600px white, 1050px 250px white, 1350px 500px white,
+    1550px 300px white, 1750px 550px white;
+  animation: drift3 150s linear infinite, twinkle 5s infinite ease-in-out;
 }
 
-/* Drift animation (slight movement for depth) */
-@keyframes drift {
-  from { transform: translateY(0px) translateX(0px); }
-  to   { transform: translateY(-200px) translateX(-100px); }
+/* Drift animations – each layer moves differently */
+@keyframes drift1 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(-200px, -400px); }
 }
 
-/* Twinkle animation (random fade in/out) */
+@keyframes drift2 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(200px, -300px); }
+}
+
+@keyframes drift3 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(-150px, -200px); }
+}
+
+/* Twinkle flicker */
 @keyframes twinkle {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  50% { opacity: 0.2; }
 }
 
