@@ -71,11 +71,9 @@
 
                     <div class="about-col-2">
                         <h1 class="sub-title">About <span>Me</span></h1>
-                        <p>Hi! I am Chahana, a student at the University of Waterloo pursuing
-                            Systems Design Engineering. We incorporate 
-                            <span>electrical, mechanical, and software engineering </span> to advance <span>technology and innovation</span>. I would love to innovate with impact and SYDE allows me
-                            to impact many industries due to its powerful blend of technology and society!</p><br>
-                        I have done competitive swimming in the past and enjoy swimming as a hobby, hiking in the summers and skating in the winters.
+                        <p>Hi! I am Chahana <br> I love to innovate with impact and Systems Design Engineering at Waterloo allows me
+                            to impact <span> many industries</span> due to its powerful blend of technology and society!</p><br>
+                        I have done competitive <span>swimming </span>in the past and enjoy swimming as a hobby, hiking in the summers and skating in the winters.
                         I have also recently started to refresh my piano skills!
                         
 
@@ -85,18 +83,28 @@
                                     <p class="tab-links" onclick="openTab('education', event)">Education</p>
                                 </div>
                                 <div class="tab-contents active-tab" id="skills">
-                                    <div class="skill">Python  <i class="fa-brands fa-python"></i></div>
-                                    <div class="skill">Java  <i class="fa-brands fa-java"></i></div>
-                                    <div class="skill">C++  <i class="fa-regular fa-file-code"></i></div>
-                                    <div class="skill">SQL  <i class="fa-solid fa-database"></i></div>
-                                    <div class="skill">HTML  <i class="fa-brands fa-html5"></i></div>
-                                    <div class="skill">CSS  <i class="fa-brands fa-css"></i></div>
-                                    <div class="skill">JavaScript  <i class="fa-brands fa-js"></i></div>
-                                    <div class="skill">Node.js <i class="fa-brands fa-node-js"></i></div>
-                                    <div class="skill">MongoDB  <i class="fa-solid fa-leaf"></i></div>
-                                    <div class="skill">Matlab  <i class="fa-solid fa-mountain-sun"></i></div>
-                                    <div class="skill">Solidworks <i class="fa-solid fa-gears"></i></div>
-                                    <div class="skill">AutoCAD <i class="fa-solid fa-ruler"></i></div>
+                                    <h3 class="skill-category-title"></h3>
+                                    <div class="skill-group">
+                                        <div class="skill">HTML/CSS  <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css"></i></div>
+                                        <div class="skill">Java  <i class="fa-brands fa-java"></i></div>
+                                        <div class="skill">C++  <i class="fa-regular fa-file-code"></i></div>
+                                        <div class="skill">C#  <i class="fa-regular fa-file-code"></i></div>
+                                        <div class="skill">Python  <i class="fa-brands fa-python"></i></div>
+                                        <div class="skill">SQL  <i class="fa-solid fa-database"></i></div>
+                                        <div class="skill">JavaScript  <i class="fa-brands fa-js"></i></div>
+                                        <div class="skill">TypeScript  <i class="fa-brands fa-js"></i></div>
+                                    </div>
+                                    <h3 class="skill-category-title"></h3>
+                                    <div class="skill-group">
+                                        <div class="skill">React <i class="fa-brands fa-react"></i></div>
+                                        <div class="skill">Node.js <i class="fa-brands fa-node-js"></i></div>
+                                        <div class="skill">Express.js <i class="fa-brands fa-node-js"></i></div>
+                                        <div class="skill">Tailwind CSS <i class="fa-brands fa-css"></i></div>
+                                        <div class="skill">GitHub <i class="fa-brands fa-github"></i></div>
+                                        <div class="skill">Power BI <i class="fa-solid fa-chart-line"></i></div>
+                                        <div class="skill">MATLAB <i class="fa-solid fa-mountain-sun"></i></div>
+                                        <div class="skill">Solidworks <i class="fa-solid fa-gears"></i></div>
+                                    </div>
                                 </div>
                                 <div class="tab-contents" id="education">
                                     <h3>Bachelor of Applied Science - BASc, Systems Design Engineering</h3>
@@ -109,7 +117,6 @@
                                         <li><b>SYDE 101L:</b> Solidworks</li>
                                         <li><b>SYDE 113 & SYDE 101L:</b> MATLAB</li>
                                     </ul>
-                                    <img src="Other Images/uwlogo2.avif" alt="University of Waterloo Logo" class="uw-logo">
                                 </div>
                             </div>                                                    
                     </div>
@@ -250,26 +257,6 @@
     </div>
   
     <!-- Project 3 -->
-    <div class="project-card full-row">
-      <div class="project-header" onclick="toggleDropdown(this)">
-        <span class="project-title">Save, Don't Stress! - Grocery Platfrom - Hack Canada</span>
-        <span class="dropdown-icon">&#9660;</span>
-      </div>
-      <div class="project-content">
-        <p class="tech-stack">Google Cloud Platform (GCP), Node.js, Express.js, React.js, HTML, Cascading Style Sheets (CSS)</p>
-        <p>
-            <br><br>• Web app addressing rising grocery prices in Canada, helping users find the most affordable grocery options near their geological location.
-            <br><br>• Developed the backend using <b>Node.js and Express.js</b>, while the frontend was built with <b>HTML, CSS, and JavaScript (React.js)</b>.
-            <br><br>• Uses <b>Generative AI API</b> to generate <b>JSON code blocks</b>to return top 10 closest grocery stores with the cheapest price for that item when users enter their location and any item they need. 
-            <br><br>• Implemented <b>Google Cloud Platform (GCP)</b> services, integrating Google Maps API for location-based search. 
-
-        </p>
-        <a href="https://github.com/Chahanareddy/Save-Dont-Stress" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
-      </div>
-    </div>
-
-    
-      <!-- Project 4 -->
       <div class="project-card full-row">
         <div class="project-header" onclick="toggleDropdown(this)">
           <span class="project-title">AI Chrome Extension - Queen's Hack</span>
@@ -285,20 +272,22 @@
       </div>
 
       
-    <!-- Project 5 -->
+    <!-- Project 4 -->
     <div class="project-card full-row">
         <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Website Portfolio</span>
+          <span class="project-title">Ecotoken - Hack the Valley X Snowflake API Winner</span>
           <span class="dropdown-icon">&#9660;</span>
         </div>
         <div class="project-content">
-          <p class="tech-stack">HTML, CSS, JavaScript</p>
-          <p>• Designed and developed my personal responsive website using <b>HTML, CSS and Javascript </b>to showcase my skills, projects, and background.</p>
-          <a href="https://github.com/Chahanareddy/Portfolio" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
+          <p class="tech-stack">Snowflake API, Node.js, Typescript (Next.js), SQL</p>
+          <p>• Chrome extension that optimizes LLM user prompts, reducing token usage and estimating environment savings in CO2/water.
+            <br><br>• Node.js + Snowflake backend using JWT auth, SQL REST API, and Cortex AI to securely execute stored procedures for prompt optimization; winning the Snowflake API category among 400+ participants.
+            <br><br>• Next.js frontend with TypeScript, Tailwind, and Radix UI.</p>
+          <a href="https://devpost.com/software/ecotoken-gb0ecp" target="_blank"><i class="fa-solid fa-laptop-code"></i> Devpost Link</a>
         </div>
       </div>
 
-      <!-- Project 6 -->
+      <!-- Project 5 -->
     <div class="project-card full-row">
         <div class="project-header" onclick="toggleDropdown(this)">
           <span class="project-title">Doordash Stock Pitch - Target Alpha</span>
@@ -308,7 +297,7 @@
           <p class="tech-stack">Stock Analysis</p>
           <p>• Conducted a comprehensive analysis of DoorDash stock, evaluating financial performance, market position, and growth
             potential to assess its investment viability and presented at Target Alpha.
-            <br><br>• Performed SWOT analysis to evaluate DoorDash’s strategic position, identifying key strengths, weaknesses, opportunities,
+            <br>• Performed SWOT analysis to evaluate DoorDash’s strategic position, identifying key strengths, weaknesses, opportunities,
             and threats to provide a comprehensive investment outlook. Utilized advanced Microsoft Word, Powerpoint and Excel.
         </p>
         </div>
@@ -323,7 +312,7 @@
         <div class="project-content">
           <img src="Other Images/SWss.png" class="project-image" alt="Preview" />
           <p class="tech-stack">SolidWorks, AutoCAD</p>
-          <p>• Gained hands-on experience with SolidWorks in my Systems Design Engineering course- assembly design and engineering drawings.
+          <p>• Gained hands-on experience with SolidWorks in my Systems Design Engineering- assembly design and engineering drawings.
             <br><br>• Enhanced my CAD proficiency as a CAD Programmer at Sable Metal Fabrication, where I applied engineering drawing principles to manufacturable models for real-world applications such as brackets, jigs, etc.</p>
           <a href="https://drive.google.com/file/d/1l8pTXKTTlqW0FUC7b8nhj4eWCxN2f9PW/view?usp=sharing" target="_blank">Solidworks Projects</a>
         </div>
@@ -340,7 +329,7 @@
           <p class="tech-stack">Adobe Photoshop</p>
           <p>
         • I love design because it allows me to bring creativity and ideas to life in a visual way.
-        <br><br>• 4+ years of Adove Photoshop experience through a Communications Technology course.
+        <br><br>• 4+ years of Adobe Photoshop experience through a Communications Technology course.
           </p>
           <a href="" target="_blank">View Designs</a>
         </div>
@@ -438,10 +427,10 @@
 
                 <div class="contact-right">
                 <form name="submit-to-google-sheet">
-                    <input type="text" name="Name"placeholder="Your Name" required>
-                    <input type="email" name=""email" placeholder="Your email" required>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit"class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
@@ -650,34 +639,10 @@
 </script>    
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const projectCards = document.querySelectorAll(".project-card");
-  
-      // Intersection Observer to animate progress bar on scroll
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const progress = entry.target.querySelector(".progress.java");
-            if (progress && !progress.classList.contains("animated")) {
-              progress.classList.add("animated"); // trigger CSS animation
-              progress.style.width = "100%";
-              observer.unobserve(entry.target); // animate only once
-            }
-          }
-        });
-      }, { threshold: 0.5 });
-  
-      // Toggle dropdown and set up observer
-      projectCards.forEach((card) => {
-        const header = card.querySelector(".project-header");
-  
-        header.addEventListener("click", () => {
-          card.classList.toggle("open");
-        });
-  
-        observer.observe(card);
-      });
-    });
+    function toggleDropdown(element) {
+        const card = element.closest('.project-card');
+        card.classList.toggle("open");
+    }
   </script>
   
   

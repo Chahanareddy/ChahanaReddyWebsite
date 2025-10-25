@@ -48,13 +48,16 @@ body {
 }
 
 .header-image {
-    width: 40%; /* Keeps the image size */
-    height: auto;
+    width: 350px; /* Fixed oval size */
+    height: 450px; /* Fixed oval size - taller than wide */
     position: absolute; /* Allows coordinate-based positioning */
     top: 21%; /* Moves the image higher */
-    right: 3%; /* Moves the image further right */
+    right: 10%; /* Moves the image further right */
     object-fit: cover; /* Ensures the image scales properly */
     z-index: 0; /* Sends the image to the background */
+    border-radius: 50%; /* Makes it oval */
+    box-shadow: 0 0 30px #9900ff, 0 0 50px #9900ff, 0 0 70px rgba(153, 0, 255, 0.5); /* Purple glow effect */
+    border: 5px solid #9900ff; /* Purple border */
 }
 
 .logo {
@@ -196,22 +199,36 @@ top: 80px;
 }
 /* Skills Styling */
 #skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    display: block;
     margin-top: 20px;
 }
 
+.skill-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.skill-category-title {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
 #skills .skill {
-    font-size: 1.1rem;
+    font-size: 0.83rem; /* 75% of 1.1rem */
     font-weight: bold;
     color: #fff;
     flex: 1 1 20%; /* Ensure 5 items per row */
     text-align: center;
-    padding: 15px;
+    padding: 11.25px; /* 75% of 15px */
     border-radius: 10px;
     background-color: #9900ff; /* Default background color */
+    min-width: 90px; /* 75% of 120px */
 }
 
 #skills .skill:nth-child(1) {
@@ -247,7 +264,7 @@ top: 80px;
 }
 
 #skills .skill:nth-child(9) {
-    background-color: #7305e0; /* Darkest purple */
+    background-color: #7305e0;
 }
 
 #skills .skill:nth-child(10) {
