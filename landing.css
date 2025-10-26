@@ -1,0 +1,223 @@
+/* Netflix-Style Landing Page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.netflix-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0f0026, #141414);
+}
+
+/* Netflix Header */
+.netflix-header {
+    padding: 20px 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.netflix-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* Profile Selection */
+.profile-selection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.profile-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.profiles-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.profile-card:hover .profile-avatar {
+    border-color: #fff;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: #333;
+    color: #fff;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    color: #808080;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.profile-card:hover .profile-name {
+    color: #fff;
+}
+
+.warning-message {
+    color: #ff4444;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    animation: fadeIn 0.3s ease-in;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
+}
+
+/* Profile Actions */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.manage-profiles-btn {
+    background: transparent;
+    border: 1px solid #808080;
+    color: #808080;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.manage-profiles-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .netflix-header {
+        padding: 20px 30px;
+    }
+    
+    .profile-selection {
+        padding: 0 30px;
+    }
+    
+    .profile-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .profiles-container {
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profiles-container {
+        gap: 20px;
+    }
+    
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-icon {
+        font-size: 2rem;
+    }
+    
+    .profile-name {
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.profile-card:nth-child(1) { animation-delay: 0.1s; }
+.profile-card:nth-child(2) { animation-delay: 0.2s; }
+.profile-card:nth-child(3) { animation-delay: 0.3s; }
+.profile-card:nth-child(4) { animation-delay: 0.4s; }
