@@ -4,647 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chahana's Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Chahana's Portfolio - Who's Visiting?</title>
+    <link rel="stylesheet" href="landing.css">
     <link rel="icon" type="image/png" href="fevicon.png">
-    <script src="https://kit.fontawesome.com/74a7c6c471.js" crossorigin="anonymous"></script>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Chahana Reddy",
-  "url": "https://chahanareddy.netlify.app",
-  "logo": "logo.png"
-}
-</script>
-    
-
 </head>
-
 <body>
+    <div class="netflix-container">
+        <!-- Netflix Header -->
+        <header class="netflix-header">
+            <div class="netflix-logo">
+                <img src="Other Images/logo.png" alt="Chahana's Logo" class="logo-img">
+            </div>
+        </header>
 
-    <header>
-    <nav class="navbar">
-        <a href="#header" class="logo"><img src="Other Images/logo.png" alt="Logo"></a>
-        <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times close-btn" onclick="closemenu()"></i>
-        </ul>
-        <i class="fas fa-bars menu-btn" onclick="openmenu()"></i>
-    </nav>
-</header>
-    <div id="header">
-        
-        <!-- <video autoplay loop muted plays-inline class="bg-vid">
-            <source src="Videos/vidbg.mp4" type="video/mp4">
-        </video> --> 
-        <div class="container">
+        <!-- Profile Selection -->
+        <div class="profile-selection">
+            <h1 class="profile-title">Who's visiting?</h1>
             
-           <div class="starfield stars"></div>
-<div class="starfield stars2"></div>
-<div class="starfield stars3"></div>
+            <div class="profiles-container">
+                <div class="profile-card" onclick="selectProfile('chahana')">
+                    <div class="profile-avatar">
+                        <img src="Other Images/chahanapfpvisitor.png" alt="Chahana" class="profile-img">
+                    </div>
+                    <div class="profile-name">Chahana</div>
+                </div>
 
-    
-            <div class="header-text">
-                <p class="fall-bounce"> Systems Design Engineer</p><br>
-                <h1 class="fall-bounce">Hi, I'm <span>Chahana Reddy</span>, </h1> <br>
-                <h3 class="fall-bounce">a student at the University of Waterloo</h3>
+                <div class="profile-card" onclick="selectProfile('user1')">
+                    <div class="profile-avatar">
+                        <img src="Other Images/user1pfp.png" alt="User 1" class="profile-img">
+                    </div>
+                    <div class="profile-name">User 1</div>
+                </div>
+
+                <div class="profile-card" onclick="selectProfile('user2')">
+                    <div class="profile-avatar">
+                        <img src="Other Images/user2pfp.png" alt="User 2" class="profile-img">
+                    </div>
+                    <div class="profile-name">User 2</div>
+                </div>
+
+                <div class="profile-card" onclick="selectProfile('guest')">
+                    <div class="profile-avatar">
+                        <img src="Other Images/visitorpfp.png" alt="Guest" class="profile-img">
+                    </div>
+                    <div class="profile-name">Guest</div>
+                </div>
+            </div>
+
+            <div class="warning-message" id="chahana-warning" style="display: none;">
+                ⚠️ You're not Chahana... 🤨
             </div>
             
-            <img src="Other Images/gradpic.png" class="header-image" alt="Chahana">
-        </div>
-    </div>
-
-    <!---------------------- ABOUT ---------------------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="Other Images/abtmepic.jpg" alt="">
-                </div>
-
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About <span>Me</span></h1>
-                        <p>Hi! I am Chahana <br> I love to innovate with impact and Systems Design Engineering at Waterloo allows me
-                            to impact <span> many industries</span> due to its powerful blend of technology and society!</p><br>
-                        I have done competitive <span>swimming </span>in the past and enjoy swimming as a hobby, hiking in the summers and skating in the winters.
-                        I have also recently started to refresh my piano skills!
-                        
-
-                            <div id="skills-education-tabs">
-                                <div class="tab-titles">
-                                    <p class="tab-links active-link" onclick="openTab('skills', event)">Skills</p>
-                                    <p class="tab-links" onclick="openTab('education', event)">Education</p>
-                                </div>
-                                <div class="tab-contents active-tab" id="skills">
-                                    <h3 class="skill-category-title"></h3>
-                                    <div class="skill-group">
-                                        <div class="skill">HTML/CSS  <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css"></i></div>
-                                        <div class="skill">Java  <i class="fa-brands fa-java"></i></div>
-                                        <div class="skill">C++  <i class="fa-regular fa-file-code"></i></div>
-                                        <div class="skill">C#  <i class="fa-regular fa-file-code"></i></div>
-                                        <div class="skill">Python  <i class="fa-brands fa-python"></i></div>
-                                        <div class="skill">SQL  <i class="fa-solid fa-database"></i></div>
-                                        <div class="skill">JavaScript  <i class="fa-brands fa-js"></i></div>
-                                        <div class="skill">TypeScript  <i class="fa-brands fa-js"></i></div>
-                                    </div>
-                                    <h3 class="skill-category-title"></h3>
-                                    <div class="skill-group">
-                                        <div class="skill">React <i class="fa-brands fa-react"></i></div>
-                                        <div class="skill">Node.js <i class="fa-brands fa-node-js"></i></div>
-                                        <div class="skill">Express.js <i class="fa-brands fa-node-js"></i></div>
-                                        <div class="skill">Tailwind CSS <i class="fa-brands fa-css"></i></div>
-                                        <div class="skill">GitHub <i class="fa-brands fa-github"></i></div>
-                                        <div class="skill">Power BI <i class="fa-solid fa-chart-line"></i></div>
-                                        <div class="skill">MATLAB <i class="fa-solid fa-mountain-sun"></i></div>
-                                        <div class="skill">Solidworks <i class="fa-solid fa-gears"></i></div>
-                                    </div>
-                                </div>
-                                <div class="tab-contents" id="education">
-                                    <h3>Bachelor of Applied Science - BASc, Systems Design Engineering</h3>
-                                    <p><br> Relevent Courses (Year 1):</br></p>
-                                    <ul>
-                                        <li><b>SYDE 121:</b> C++ Data Structures and Algorithms</li>
-                                        <li><b>SYDE 223:</b> C++ Data Structures and Algorithms 2</li>
-                                        <li><b>SYDE 192:</b> Digital Circuits</li>
-                                        <li><b>SYDE 161 & SYDE 162:</b> Engineering Design and Prototyping</li>
-                                        <li><b>SYDE 101L:</b> Solidworks</li>
-                                        <li><b>SYDE 113 & SYDE 101L:</b> MATLAB</li>
-                                    </ul>
-                                </div>
-                            </div>                                                    
-                    </div>
+            <div class="profile-actions">
+                <button class="manage-profiles-btn">Manage Profiles</button>
             </div>
         </div>
     </div>
-
-    <!--
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">Projects</h1>
-            <div class="projects-list">
-                 
-                <div class="gamedev">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>Game Development</h2><p class="tech-stack">
-                        Java <br><j class="fa-brands fa-java"></j>
-                    <br><p>- Developed a console-based slot machine game in Java, utilizing test case libraries and enhancing user experience.<br><br>
-                       - Applied object-oriented programming principles to organize code into classes and methods, incorporating splash screens, 
-                         main menu navigation, instructions, and gameplay functions.<br><br>
-                       - Multi-user program implementing file handling, exception handling, conditional logic, and file writing. Players’ data, 
-                         including individual balances, are saved to a file, allowing users to resume their game in future sessions.</p><br>
-                
-                     Added Video Section ->
-                    <video class="game-dev-video" autoplay loop muted playsinline>
-                        <source src="Videos/slotmachinedemo.mp4" type="video/mp4">
-                    </video>
-                
-                    <br>
-                    <a href="https://github.com/Chahanareddy/SlotMachine" target="_blank" class="github-link">
-                        <i class="fa-brands fa-github"></i> View on GitHub
-                    </a>
-                </div>
-            
-
-  
-                <div class="webdev">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Website Development</h2><p class="tech-stack">
-                        HTML, CSS, Javascript, Node.js <br>
-                        <j class="fa-brands fa-html5"></j>
-                        <j class="fa-brands fa-css"></j>
-                        <j class="fa-brands fa-js"></j>
-                        <j class="fa-brands fa-node-js"></j>
-                    <p>
-                    - Developed the front-end of my website using HTML, CSS and Javascript with a user-friendly design
-                    <br><br>- Deployed on Netlify with continuous integration, automating updates by linking to GitHub.
-                </p>
-
-                 Added Video Section 
-                 <video class="webdev-video" autoplay loop muted playsinline>
-                    <source src="Videos/webdevdemo.mp4" type="video/mp4">
-                </video>
-                            
-                <br><a href="https://chahanareddy.netlify.app/" target="_blank" class="website-link">
-                        <i class="fa-solid fa-laptop"></i> View Website
-                    </a>
-                <br>
-                </div>
-            </div>
-
-                <div class="project">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <h2>Solidworks</h2>
-                    
-                    <p>-Gained hands-on experience with SolidWorks in my Systems Design Engineering course, where I explored assembly design, and engineering drawings. 
-                        <br><br>-Enhanced my CAD proficiency as a CAD Programmer at Sable, where I applied engineering drawing principles to manufacturable models real-world applications.</p>
-                        <div class="project-card">
-                            <img src="Other Images/SWss.png" alt="SolidWorks Project">
-                            <a href="https://drive.google.com/file/d/1l8pTXKTTlqW0FUC7b8nhj4eWCxN2f9PW/view?usp=sharing" target="_blank" class="btn">Learn More</a>
-                        </div>
-                </div>              
-
-                <div class="photoshop">
-                    <i class="fa-solid fa-photo-film"></i>
-                    <h2>Adobe Photoshop</h2>
-                    <p>-I love design because it allows me to bring creativity and ideas to life in a visual way. 
-                    <br><br>-I've been using Photoshop for over four years through a Communications Technology course.
-                    <br>Here are just a few of my many projects!</p>
-                    <div class="carousel-container">
-                        <button class="prev" onclick="changeSlide(-1)">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <div class="carousel">
-                            <img src="Adobe Photoshop/CommtechLogo.jpg" class="carousel-slide">
-                            <img src="Adobe Photoshop/MagazineCover.jpg" class="carousel-slide">
-                            <img src="Adobe Photoshop/space.jpg" class="carousel-slide">
-                            <img src="Adobe Photoshop/subwayad.jpg" class="carousel-slide">
-                            <img src="Adobe Photoshop/IronMan.jpg" class="carousel-slide">
-                        </div>
-                        <button class="next" onclick="changeSlide(1)">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>           
-            </div>
-        </div>
-    </div>
--->
-
-<div id="projects">
-    
-<div class="projects-list">
-    <h1 class="sub-title">Projects</h1>
- 
-    <!-- Project 1 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Game Development</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-            <p class="tech-stack">Java</p>
-          <p>
-            • Developed a console-based slot machine game in Java, utilizing test case libraries and enhancing user experience.
-            <br><br>• Applied object-oriented programming principles to organize code into classes and methods, incorporating splash screens, main menu navigation, instructions, and gameplay functions.
-            <br><br>• Multi-user program implementing file handling, exception handling, conditional logic, and file writing. Players’ data, including individual balances, are saved to a file, allowing users to resume their game in future sessions.
-          </p>
-          <a href="https://github.com/Chahanareddy/SlotMachine" target="_blank"> <i class="fa-brands fa-github"></i> GitHub Link</a>
-          </a>
-        </div>
-    </div>
-  
-    <!-- Project 2 -->
-    <div class="project-card full-row">
-      <div class="project-header" onclick="toggleDropdown(this)">
-        <span class="project-title">UpAble - Boston Consulting Group x Global Spark - Hackathon</span>
-        <span class="dropdown-icon">&#9660;</span>
-      </div>
-      <div class="project-content">
-        <p class="tech-stack">React, CSS, Node.js, Google Cloud Platform, REST API</p>
-        <p>• Competed against 300 students across 100 institutions from 30 countries. Developed a career-upskilling full-stack platform that helps disabled users to explore careers and upskill, earning a perfect 5/5 from BCG judges.
-            <br><br>• Full-stack platform built with a React.js front end, Node.js back end, and a REST API through Google Cloud Platform. Collects survey data to generate tailored career roadmaps and integrated an AI-powered chatbot using a Gemini API.
-            <br><br>• Dashboard for users to network with other disabled professionals for mentorship and to showcase skills, giving employers a pool of talented candidates to satisfy EU disability-hiring requirements.</p>
-        <a href="https://github.com/Chahanareddy/upable" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
-      </div>
-    </div>
-  
-    <!-- Project 3 -->
-      <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">AI Chrome Extension - Queen's Hack</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Python, Flask, Javascript, HTML/CSS, GCP, API</p>
-          <p>• A Chrome Extension that keeps you on-task by blocking distracting websites and offering a Pomodoro timer.
-            <br><br>• Each time you load or switch tabs, Mission Complete uses its backend, <b>Gemini API</b>, to determine if you're off-task and automatically closes the tab to get you back on track!
-            <br><br>• Pomodoro technique: A 25-minute timer starts in the extension popup and notifies you when time's up.</p>
-            <a href="https://github.com/Chahanareddy/Mission-Complete" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
-        </div>
-      </div>
-
-      
-    <!-- Project 4 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Ecotoken - Hack the Valley X Snowflake API Winner</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Snowflake API, Node.js, Typescript (Next.js), SQL</p>
-          <p>• Chrome extension that optimizes LLM user prompts, reducing token usage and estimating environment savings in CO2/water.
-            <br><br>• Node.js + Snowflake backend using JWT auth, SQL REST API, and Cortex AI to securely execute stored procedures for prompt optimization; winning the Snowflake API category among 400+ participants.
-            <br><br>• Next.js frontend with TypeScript, Tailwind, and Radix UI.</p>
-          <a href="https://devpost.com/software/ecotoken-gb0ecp" target="_blank"><i class="fa-solid fa-laptop-code"></i> Devpost Link</a>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Doordash Stock Pitch - Target Alpha</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Stock Analysis</p>
-          <p>• Conducted a comprehensive analysis of DoorDash stock, evaluating financial performance, market position, and growth
-            potential to assess its investment viability and presented at Target Alpha.
-            <br>• Performed SWOT analysis to evaluate DoorDash’s strategic position, identifying key strengths, weaknesses, opportunities,
-            and threats to provide a comprehensive investment outlook. Utilized advanced Microsoft Word, Powerpoint and Excel.
-        </p>
-        </div>
-      </div>
-
-     <!-- Project 7 -->
-     <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">SolidWorks</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <img src="Other Images/SWss.png" class="project-image" alt="Preview" />
-          <p class="tech-stack">SolidWorks, AutoCAD</p>
-          <p>• Gained hands-on experience with SolidWorks in my Systems Design Engineering- assembly design and engineering drawings.
-            <br><br>• Enhanced my CAD proficiency as a CAD Programmer at Sable Metal Fabrication, where I applied engineering drawing principles to manufacturable models for real-world applications such as brackets, jigs, etc.</p>
-          <a href="https://drive.google.com/file/d/1l8pTXKTTlqW0FUC7b8nhj4eWCxN2f9PW/view?usp=sharing" target="_blank">Solidworks Projects</a>
-        </div>
-      </div>
-    
-      <!-- Project 8 -->
-      <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Adobe Photoshop</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <img src="Adobe Photoshop/MagazineCover.jpg" class="project-image" alt="Preview" />
-          <p class="tech-stack">Adobe Photoshop</p>
-          <p>
-        • I love design because it allows me to bring creativity and ideas to life in a visual way.
-        <br><br>• 4+ years of Adobe Photoshop experience through a Communications Technology course.
-          </p>
-          <a href="" target="_blank">View Designs</a>
-        </div>
-      </div>
-
-  </div>
-</div>
-</div>
-  
-<div id="experience">
-        <div class="container">
-            <h1 class="sub-title">Work Experience</h1>
-            <div class="experience-list">
-
-                <div class="experience">
-                    <div class="experience-front">
-                        <img src="Experience Logos/kennalogo.jpg" alt="Company Logo">
-                        <h2>Full Stack Developer</h2>
-                    </div>
-                    <div class="experience-back">
-                        <h2>Full Stack Developer </h2>
-                        <span class="date">Sep 2025 - Present</span><br><br><br><br>
-                        <p>To be updated.
-                            <br><br><br><br><br><br>
-                        <p class="skills">Skills: Node.js, Express.js, LotusScript, SQL, Typescript, React, Javascript, jQuery</p>
-                    
-                    </div>
-                </div>
-
-                <div class="experience">
-                    <div class="experience-front">
-                        <img src="Experience Logos/sablelogo.jpg" alt="Company Logo">
-                        <h2>Automation Developer</h2>
-                    </div>
-                    <div class="experience-back">
-                        <h2>Automation Developer </h2>
-                        <span class="date">Jan 2025 - Apr 2025</span><br><br><br><br>
-                        <p>To be updated.
-                            <br><br><br><br><br><br>
-                        <p class="skills">Skills: Power Apps, Software Automation, Solidworks, AutoCAD, Data Analysis, Power BI, QC, Quoting, Engineering drawings </p>
-                    
-                    </div>
-                </div>
-    
-                <div class="experience">
-                    <div class="experience-front">                        
-                        <img src="Experience Logos/scorelogo.jpg" alt="Company Logo">
-                        <h2>Program Coordinator</h2>
-                    </div>
-                    <div class="experience-back">
-                        <h2>Program Coordinator</h2>
-                        <span class="date">Jun 2022 - Aug 2022</span><br><br><br>
-                        <p>Coordinated and managed daily operations of camp programs, ensuring
-                            smooth delivery of activities, high-quality experiences for all participants and improved efficiency.<br>
-                            <br><p>Developed and implemented engaging recreational, educational, and team-building activities tailored to different age
-                                groups and skill levels.
-                            <br><br>
-                        <p class="skills">Skills: Program development, Operations management, Data management, Leadership, Collaboration</p>
-                    </div>
-                </div>
-    
-                <div class="experience">
-                    <div class="experience-front">                        
-                        <img src="Experience Logos/harvardlogo.png" alt="Company Logo">
-                        <h2>Data Transcriber</h2>
-                    </div>
-                    <div class="experience-back">
-                        <h2>Data Transcriber</h2>
-                        <span class="date">Dec 2022 - Jan 2024</span><br><br><br>
-                        <p>Analyzed astronomical sketches, graphs, and non-textual figures from historical notebooks at the Harvard College
-                            Observatory, contributing to a citizen science project with valuable data in early astronomical research.</p>
-                            <br><br>
-                            <p>Compiled and organized research findings into comprehensive reports, effectively highlighting key insights and trends,</p>
-                            <br>
-                            <p class="skills">Skills: Data analysis, Data transcribing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> c3reddy@uwaterloo.ca</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/chahana-reddy-952a43281/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/Chahanareddy"><i class="fa-brands fa-github"></i></a>
-                <a href="file:///C:/Users/chaha/Desktop/MyWebsite/index.html"><i class="fa-solid fa-globe"></i></a>    
-                </div>
-                    <a href="https://drive.google.com/file/d/1FF-oT_Z8S0wEWQv-Z7-0F4hLSD9lKNmi/view" target="_blank" class="btn btn2">Resume</a>
-                </div>
-
-                <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-
-        </div>
-        <div class="copyright">
-            <p><i class="fa-regular fa-copyright"></i>hahana</p>
-        </div>
-    </div>
-
 
     <script>
-        function openTab(tabName, event) {
-            const tabContents = document.querySelectorAll('.tab-contents'); // All tab content sections
-            const tabLinks = document.querySelectorAll('.tab-links'); // All tab buttons
-            const skillsSection = document.getElementById('skills'); // The skills section
-    
-            // Hide all tab contents
-            tabContents.forEach((tab) => {
-                tab.classList.remove('active-tab'); // Remove active class
-                tab.style.display = "none"; // Ensure all sections are hidden
-            });
-    
-            // Remove active class from all buttons
-            tabLinks.forEach((link) => {
-                link.classList.remove('active-link'); // Remove active class
-            });
-    
-            // Show the selected tab content and highlight the clicked tab button
-            const selectedTab = document.getElementById(tabName);
-            selectedTab.classList.add('active-tab');
-            selectedTab.style.display = "block"; // Ensure the selected tab is visible
-            event.target.classList.add('active-link');
-    
-            // If "Education" is selected, hide the skills section explicitly
-            if (tabName === 'education') {
-                skillsSection.style.display = "none"; // Hide skills
+        function selectProfile(profile) {
+            // Special handling for Chahana profile
+            if (profile === 'chahana') {
+                const warning = document.getElementById('chahana-warning');
+                warning.style.display = 'block';
+                return; // Don't redirect
             }
-    
-            // If "Skills" is selected, reapply animations
-            if (tabName === 'skills') {
-                skillsSection.style.display = "flex"; // Show skills
-                showSkills(); // Trigger animation
-            }
+            
+            // Add loading animation for other profiles
+            document.body.style.cursor = 'wait';
+            
+            // Simulate Netflix-style loading
+            setTimeout(() => {
+                // All other profiles lead to the same portfolio
+                window.location.href = 'portfolio.html';
+            }, 1000);
         }
-    
-        // Function to animate skills
-        function showSkills() {
-            const skills = document.querySelectorAll('.skill');
-    
-            // Reset animations
-            skills.forEach((skill) => {
-                skill.classList.remove('animate');
+
+        // Add hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileCards = document.querySelectorAll('.profile-card');
+            
+            profileCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
             });
-    
-            // Add animations with staggered delays
-            skills.forEach((skill, index) => {
-                setTimeout(() => {
-                    skill.classList.add('animate');
-                }, index * 200); // Stagger animation delay
-            });
-        }
-    
-        // Scroll-triggered animation (Intersection Observer)
-        document.addEventListener("DOMContentLoaded", function () {
-            let skillsSection = document.getElementById("skills");
-            let skills = document.querySelectorAll(".skill");
-    
-            let observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            showSkills(); // Play animation when the section is visible
-                        }
-                    });
-                },
-                { threshold: 0.5 } // Trigger when 50% of the section is visible
-            );
-    
-            observer.observe(skillsSection);
         });
-
-        
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove("active"));
-        slides[index].classList.add("active");
-    }
-
-    function changeSlide(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) {
-            currentIndex = slides.length - 1;
-        } else if (currentIndex >= slides.length) {
-            currentIndex = 0;
-        }
-        showSlide(currentIndex);
-    }
-
-    // Initialize first slide as visible
-    showSlide(currentIndex);
-
     </script>
-
-<script>
-    function openmenu() {
-        document.getElementById("sidemenu").style.right = "0";
-    }
-
-    function closemenu() {
-        document.getElementById("sidemenu").style.right = "-250px";
-    }
-</script>
-    
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxFWwdVbtnySsJTCKw330q_gzubdqmk6EnZYQMz2JoaO-aP4_eAF5KmIGY3ojeEYUbu/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg=document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML="Messagge sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const menu = document.querySelector("nav ul");
-    const menuItems = document.querySelectorAll("nav ul li a");
-    const menuToggle = document.querySelector(".menu-toggle"); // Hamburger icon
-    const closeButton = document.querySelector(".close-menu"); // Close button (X)
-
-    // Ensure menu is hidden on load
-    menu.classList.remove("active");
-
-    // Function to close the menu
-    function closeMenu() {
-        menu.classList.remove("active"); // Hide menu
-    }
-
-    // Function to open the menu
-    function openMenu() {
-        menu.classList.add("active"); // Show menu
-    }
-
-    // Attach click event to open menu button
-    menuToggle.addEventListener("click", openMenu);
-
-    // Attach click event to close button
-    closeButton.addEventListener("click", closeMenu);
-
-    // Close menu when a menu item is clicked
-    menuItems.forEach(item => {
-        item.addEventListener("click", closeMenu);
-    });
-});
-
-
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let headerText = document.querySelector(".header-text");
-    
-        function checkScroll() {
-            let rect = headerText.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.8) { // If 80% of the viewport sees the header
-                headerText.classList.add("visible");
-            } else {
-                headerText.classList.remove("visible"); // Remove class when out of view
-            }
-        }
-    
-        window.addEventListener("scroll", checkScroll);
-        checkScroll(); // Run once in case it's already in view
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-    const headerText = document.querySelector(".header-text");
-
-    function animateHeaderText() {
-        const rect = headerText.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        if (rect.top < windowHeight * 0.75) {
-            headerText.style.animation = "bounceIn 1.5s ease-out forwards, pulsate 2s infinite ease-in-out 1.5s";
-        } else {
-            headerText.style.animation = "none"; // Reset animation when out of view
-        }
-    }
-
-    window.addEventListener("scroll", animateHeaderText);
-    animateHeaderText(); // Check on initial load
-});
-
-</script>    
-
-<script>
-    function toggleDropdown(element) {
-        const card = element.closest('.project-card');
-        card.classList.toggle("open");
-    }
-  </script>
-  
-  
 </body>
 </html>

@@ -54,6 +54,7 @@ body {
     top: 21%; /* Moves the image higher */
     right: 10%; /* Moves the image further right */
     object-fit: cover; /* Ensures the image scales properly */
+    object-position: 5% center; /* Adjusts which part of image is visible - shifts face left */
     z-index: 0; /* Sends the image to the background */
     border-radius: 50%; /* Makes it oval */
     box-shadow: 0 0 30px #9900ff, 0 0 50px #9900ff, 0 0 70px rgba(153, 0, 255, 0.5); /* Purple glow effect */
@@ -328,10 +329,42 @@ top: 80px;
     display: block; /* Show active tab */
 }
 
-/*---------------Projects--------*/
-
-#projects{
+/*---------------Other--------*/
+#other{
     padding: 10px 0;
+}
+
+#other .sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    transform: translateY(20px);
+}
+
+#other .projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 5%;
+}
+
+#other .project-card.full-row:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#other .project-card.full-row:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#other .project-card.full-row:nth-child(4) {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 .projects-list{
@@ -382,7 +415,7 @@ top: 80px;
 }
 
 .projects-list div:hover{ /*change bg color when hovered on*/
-    background: #ff004f;
+    background: #380257;
     transform:translateY(-10px);
 }
   
@@ -1007,13 +1040,39 @@ nav .fa-bars, nav .fa-times {
     z-index: 1;
 }
 /* Updated Projects Section (Dropdown Style Full Row) */
-.projects-list {
-    display: flex;
-    flex-direction: column;
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 100%;
     margin-top: 50px;
     padding: 0 5%;
+  }
+  
+  .projects-list .sub-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .project-card.full-row:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .project-card.full-row:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .project-card.full-row:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .project-card.full-row:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
   }
   
   .project-card.full-row {
@@ -1025,10 +1084,12 @@ nav .fa-bars, nav .fa-times {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
     cursor: pointer;
+    grid-column: span 1;
+    align-self: start;
   }
   
   .project-card.full-row:hover {
-    background: #ff004f;
+    background: #380257;
   }
   
   .project-header {
@@ -1038,7 +1099,7 @@ nav .fa-bars, nav .fa-times {
   }
   
   .project-title {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
   }
   
@@ -1154,5 +1215,168 @@ nav .fa-bars, nav .fa-times {
 @keyframes twinkle {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
+}
+
+/* Ecotoken Slideshow Styles */
+.ecotoken-slideshow {
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.ecotoken-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ecotoken-slide.active {
+  opacity: 1;
+}
+
+.slideshow-prev, .slideshow-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slideshow-prev {
+  left: 10px;
+}
+
+.slideshow-next {
+  right: 10px;
+}
+
+.slideshow-prev:hover, .slideshow-next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slideshow-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #9900ff;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background-color: rgba(153, 0, 255, 0.7);
+}
+
+/* Adobe Photoshop Slideshow Styles */
+.photoshop-slideshow {
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.photoshop-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.photoshop-slide.active {
+  opacity: 1;
+}
+
+/* UpAble Slideshow Styles */
+.upable-slideshow {
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.upable-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.upable-slide.active {
+  opacity: 1;
+}
+
+/* Responsive slideshow */
+@media (max-width: 768px) {
+  .slideshow-container {
+    max-width: 100%;
+  }
+  
+  .slideshow-wrapper {
+    height: 200px;
+  }
+  
+  .slideshow-prev, .slideshow-next {
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .slideshow-prev {
+    left: 5px;
+  }
+  
+  .slideshow-next {
+    right: 5px;
+  }
 }
 
