@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chahana's Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://kit.fontawesome.com/74a7c6c471.js" crossorigin="anonymous"></script>
@@ -219,124 +222,144 @@
 -->
 
 <div id="projects">
-    
-<div class="projects-list">
-    <h1 class="sub-title">Projects</h1>
- 
-    <!-- Project 1 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Game Development</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-            <p class="tech-stack">Java</p>
-          <p>
-            • Developed a console-based slot machine game in Java, utilizing test case libraries and enhancing user experience.
-            <br><br>• Applied object-oriented programming principles to organize code into classes and methods, incorporating splash screens, main menu navigation, instructions, and gameplay functions.
-            <br><br>• Multi-user program implementing file handling, exception handling, conditional logic, and file writing. Players’ data, including individual balances, are saved to a file, allowing users to resume their game in future sessions.
-          </p>
-          <a href="https://github.com/Chahanareddy/SlotMachine" target="_blank"> <i class="fa-brands fa-github"></i> GitHub Link</a>
-          </a>
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img src="Other Images/ecotokenextension.jpg" alt="Ecotoken Extension" class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://devpost.com/software/ecotoken-gb0ecp" target="_blank" class="project-link">
+                            <i class="fa-solid fa-external-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Ecotoken - Hack the Valley X Snowflake API Winner</h3>
+                    <ul class="project-description">
+                        <li> extension that optimizes LLM user prompts, reducing token usage and estimating environment savings in CO2/water.</li>
+                        <li>Node.js + Snowflake backend using JWT auth, SQL REST API, and Cortex AI to securely execute stored procedures for prompt optimization.</li>
+                        <li>Won the Snowflake API category among 400+ participants.</li>
+                        <li>Next.js frontend with TypeScript, Tailwind, and Radix UI.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Snowflake API</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://devpost.com/software/ecotoken-gb0ecp" target="_blank" class="project-link-btn">
+                            <i class="fa-solid fa-laptop-code"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <img src="Project pics/bcg6.png" alt="UpAble Platform" class="project-image">
+                    <div class="project-overlay">
+                        <a href="https://github.com/Chahanareddy/upable" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">UpAble - Boston Consulting Group x Global Spark</h3>
+                    <ul class="project-description">
+                        <li>Competed against 300 students across 100 institutions from 30 countries.</li>
+                        <li>Developed a career-upskilling full-stack platform that helps disabled users to explore careers and upskill, earning a perfect 5/5 from BCG judges.</li>
+                        <li>Full-stack platform built with React.js front end, Node.js back end, and REST API through Google Cloud Platform.</li>
+                        <li>Collects survey data to generate tailored career roadmaps and integrated an AI-powered chatbot using a Gemini API.</li>
+                        <li>Dashboard for users to network with other disabled professionals for mentorship and to showcase skills.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Gemini API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Chahanareddy/upable" target="_blank" class="project-link-btn">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <div class="project-placeholder">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="project-overlay">
+                        <a href="https://github.com/Chahanareddy/Mission-Complete" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Focus Monitor - Queen's Hack</h3>
+                    <ul class="project-description">
+                        <li>A Chrome Extension that keeps you on-task by blocking distracting websites and offering a Pomodoro timer.</li>
+                        <li>Each time you load or switch tabs, Mission Complete uses its backend, Gemini API, to determine if you're off-task and automatically closes the tab to get you back on track.</li>
+                        <li>Pomodoro technique: A 25-minute timer starts in the extension popup and notifies you when time's up.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Chrome Extension</span>
+                        <span class="tech-tag">Gemini API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Chahanareddy/Mission-Complete" target="_blank" class="project-link-btn">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item">
+                <div class="project-image-wrapper">
+                    <video class="project-image" autoplay loop muted playsinline>
+                        <source src="Videos/slotmachinedemo.mp4" type="video/mp4">
+                    </video>
+                    <div class="project-overlay">
+                        <a href="https://github.com/Chahanareddy/SlotMachine" target="_blank" class="project-link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-name">Game Development - Slot Machine</h3>
+                    <ul class="project-description">
+                        <li>Developed a console-based slot machine game in Java, utilizing test case libraries and enhancing user experience.</li>
+                        <li>Applied object-oriented programming principles to organize code into classes and methods, incorporating splash screens, main menu navigation, instructions, and gameplay functions.</li>
+                        <li>Multi-user program implementing file handling, exception handling, conditional logic, and file writing.</li>
+                        <li>Players' data, including individual balances, are saved to a file, allowing users to resume their game in future sessions.</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">OOP</span>
+                        <span class="tech-tag">File Handling</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Chahanareddy/SlotMachine" target="_blank" class="project-link-btn">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  
-    <!-- Project 2 -->
-    <div class="project-card full-row">
-      <div class="project-header" onclick="toggleDropdown(this)">
-        <span class="project-title">UpAble - Boston Consulting Group x Global Spark - Hackathon</span>
-        <span class="dropdown-icon">&#9660;</span>
-      </div>
-      <div class="project-content">
-        <p class="tech-stack">React, CSS, Node.js, Google Cloud Platform, REST API</p>
-        <p>• Competed against 300 students across 100 institutions from 30 countries. Developed a career-upskilling full-stack platform that helps disabled users to explore careers and upskill, earning a perfect 5/5 from BCG judges.
-            <br><br>• Full-stack platform built with a React.js front end, Node.js back end, and a REST API through Google Cloud Platform. Collects survey data to generate tailored career roadmaps and integrated an AI-powered chatbot using a Gemini API.
-            <br><br>• Dashboard for users to network with other disabled professionals for mentorship and to showcase skills, giving employers a pool of talented candidates to satisfy EU disability-hiring requirements.</p>
-        <a href="https://github.com/Chahanareddy/upable" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
-      </div>
-    </div>
-  
-    <!-- Project 3 -->
-      <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">AI Chrome Extension - Queen's Hack</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Python, Flask, Javascript, HTML/CSS, GCP, API</p>
-          <p>• A Chrome Extension that keeps you on-task by blocking distracting websites and offering a Pomodoro timer.
-            <br><br>• Each time you load or switch tabs, Mission Complete uses its backend, <b>Gemini API</b>, to determine if you're off-task and automatically closes the tab to get you back on track!
-            <br><br>• Pomodoro technique: A 25-minute timer starts in the extension popup and notifies you when time's up.</p>
-            <a href="https://github.com/Chahanareddy/Mission-Complete" target="_blank"><i class="fa-brands fa-github"></i> GitHub Link</a>
-        </div>
-      </div>
-
-      
-    <!-- Project 4 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Ecotoken - Hack the Valley X Snowflake API Winner</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Snowflake API, Node.js, Typescript (Next.js), SQL</p>
-          <p>• Chrome extension that optimizes LLM user prompts, reducing token usage and estimating environment savings in CO2/water.
-            <br><br>• Node.js + Snowflake backend using JWT auth, SQL REST API, and Cortex AI to securely execute stored procedures for prompt optimization; winning the Snowflake API category among 400+ participants.
-            <br><br>• Next.js frontend with TypeScript, Tailwind, and Radix UI.</p>
-          <a href="https://devpost.com/software/ecotoken-gb0ecp" target="_blank"><i class="fa-solid fa-laptop-code"></i> Devpost Link</a>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-    <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Doordash Stock Pitch - Target Alpha</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <p class="tech-stack">Stock Analysis</p>
-          <p>• Conducted a comprehensive analysis of DoorDash stock, evaluating financial performance, market position, and growth
-            potential to assess its investment viability and presented at Target Alpha.
-            <br>• Performed SWOT analysis to evaluate DoorDash’s strategic position, identifying key strengths, weaknesses, opportunities,
-            and threats to provide a comprehensive investment outlook. Utilized advanced Microsoft Word, Powerpoint and Excel.
-        </p>
-        </div>
-      </div>
-
-     <!-- Project 7 -->
-     <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">SolidWorks</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <img src="Other Images/SWss.png" class="project-image" alt="Preview" />
-          <p class="tech-stack">SolidWorks, AutoCAD</p>
-          <p>• Gained hands-on experience with SolidWorks in my Systems Design Engineering- assembly design and engineering drawings.
-            <br><br>• Enhanced my CAD proficiency as a CAD Programmer at Sable Metal Fabrication, where I applied engineering drawing principles to manufacturable models for real-world applications such as brackets, jigs, etc.</p>
-          <a href="https://drive.google.com/file/d/1l8pTXKTTlqW0FUC7b8nhj4eWCxN2f9PW/view?usp=sharing" target="_blank">Solidworks Projects</a>
-        </div>
-      </div>
-    
-      <!-- Project 8 -->
-      <div class="project-card full-row">
-        <div class="project-header" onclick="toggleDropdown(this)">
-          <span class="project-title">Adobe Photoshop</span>
-          <span class="dropdown-icon">&#9660;</span>
-        </div>
-        <div class="project-content">
-          <img src="Adobe Photoshop/MagazineCover.jpg" class="project-image" alt="Preview" />
-          <p class="tech-stack">Adobe Photoshop</p>
-          <p>
-        • I love design because it allows me to bring creativity and ideas to life in a visual way.
-        <br><br>• 4+ years of Adobe Photoshop experience through a Communications Technology course.
-          </p>
-          <a href="" target="_blank">View Designs</a>
-        </div>
-      </div>
-
-  </div>
-</div>
 </div>
   
 <div id="experience">
