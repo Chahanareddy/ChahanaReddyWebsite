@@ -342,6 +342,14 @@ top: 80px;
     justify-content: center; /* Ensures content is centered */
 }
 
+@media (max-width: 900px) {
+    .projects-list {
+        grid-template-columns: 1fr; /* Single column on tablets and phones */
+        grid-gap: 25px;
+        padding: 0 15px;
+    }
+}
+
 .projects-list div { 
     background: #380257;
     padding: 14px;
@@ -932,14 +940,14 @@ nav .fa-bars, nav .fa-times {
     }
 
     .projects-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr; /* Single column on phones */
+        grid-gap: 20px;
+        padding: 0 15px;
     }
 
     .projects-list div {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 100%; /* Full width in grid */
         font-size: 14px; /* Smaller font */
         padding: 10px; /* Reduce padding */
     }
