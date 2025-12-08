@@ -4,96 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chahana's Portfolio - Who's Visiting?</title>
-    <link rel="stylesheet" href="landing.css">
+    <title>Chahana's Portfolio</title>
+    <meta http-equiv="refresh" content="0; url=main.html">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <div class="netflix-container">
-        <!-- Netflix Header -->
-        <header class="netflix-header">
-            <div class="netflix-logo">
-                <img src="Other Images/logo.png" alt="Chahana's Logo" class="logo-img">
-            </div>
-        </header>
-
-        <!-- Profile Selection -->
-        <div class="profile-selection">
-            <h1 class="profile-title">Who's visiting?</h1>
-            
-            <div class="profiles-container">
-                <div class="profile-card" onclick="selectProfile('chahana')">
-                    <div class="profile-avatar">
-                        <img src="Other Images/chahanapfpvisitor.png" alt="Chahana" class="profile-img">
-                    </div>
-                    <div class="profile-name">Chahana</div>
-                </div>
-
-                <div class="profile-card" onclick="selectProfile('user1')">
-                    <div class="profile-avatar">
-                        <img src="Other Images/user1pfp.png" alt="User 1" class="profile-img">
-                    </div>
-                    <div class="profile-name">User 1</div>
-                </div>
-
-                <div class="profile-card" onclick="selectProfile('user2')">
-                    <div class="profile-avatar">
-                        <img src="Other Images/user2pfp.png" alt="User 2" class="profile-img">
-                    </div>
-                    <div class="profile-name">User 2</div>
-                </div>
-
-                <div class="profile-card" onclick="selectProfile('guest')">
-                    <div class="profile-avatar">
-                        <img src="Other Images/visitorpfp.png" alt="Guest" class="profile-img">
-                    </div>
-                    <div class="profile-name">Guest</div>
-                </div>
-            </div>
-
-            <div class="warning-message" id="chahana-warning" style="display: none;">
-                ⚠️ You're not Chahana... 🤨
-            </div>
-            
-            <div class="profile-actions">
-                <button class="manage-profiles-btn">Manage Profiles</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        function selectProfile(profile) {
-            // Special handling for Chahana profile
-            if (profile === 'chahana') {
-                const warning = document.getElementById('chahana-warning');
-                warning.style.display = 'block';
-                return; // Don't redirect
-            }
-            
-            // Add loading animation for other profiles
-            document.body.style.cursor = 'wait';
-            
-            // Simulate Netflix-style loading
-            setTimeout(() => {
-                // All other profiles lead to the same portfolio
-                window.location.href = 'portfolio.html';
-            }, 1000);
-        }
-
-        // Add hover effects
-        document.addEventListener('DOMContentLoaded', function() {
-            const profileCards = document.querySelectorAll('.profile-card');
-            
-            profileCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.05)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-        });
+        window.location.href = 'main.html';
     </script>
+    <p>If you are not redirected, <a href="main.html">click here</a>.</p>
 </body>
 </html>
