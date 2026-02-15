@@ -43,24 +43,27 @@
     </nav>
 </header>
     <div id="header">
-        
-        <!-- <video autoplay loop muted plays-inline class="bg-vid">
-            <source src="Videos/vidbg.mp4" type="video/mp4">
-        </video> --> 
-        <div class="container">
-            
-           <div class="starfield stars"></div>
-<div class="starfield stars2"></div>
-<div class="starfield stars3"></div>
+        <div class="starfield stars"></div>
+        <div class="starfield stars2"></div>
+        <div class="starfield stars3"></div>
+        <div class="header-glow" aria-hidden="true"></div>
 
-    
-            <div class="header-text">
-                <p class="fall-bounce"> Systems Design Engineer</p><br>
-                <h1 class="fall-bounce">Hi, I'm <span>Chahana Reddy</span>, </h1> <br>
-                <h3 class="fall-bounce">a student at the University of Waterloo</h3>
+        <div class="container header-container">
+            <div class="hero-content header-text">
+                <h1 class="hero-title fall-bounce">
+                    Hi, I'm <span>Chahana Reddy</span>
+                </h1>
+                <p class="hero-tagline fall-bounce">
+                    I love to learn and build hands-on!
+                </p>
+                <p class="hero-role">
+                    <span id="typing-text"></span><span class="typing-cursor">|</span>
+                </p>
+                <a href="#about" class="scroll-hint" aria-label="Scroll to about">
+                    <span>Scroll</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
             </div>
-            
-            <img src="Other Images/gradpic.png" class="header-image" alt="Chahana">
         </div>
     </div>
 
@@ -744,6 +747,28 @@
     window.addEventListener("scroll", animateHeaderText);
     animateHeaderText(); // Check on initial load
 });
+
+    // Typing animation for "Systems Design Engineering @ University of Waterloo"
+    (function typeSystemsDesignEngineer() {
+        const el = document.getElementById("typing-text");
+        if (!el) return;
+        const text = "Systems Design Engineering @ University of Waterloo";
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                el.textContent += text[i];
+                i++;
+                setTimeout(type, 80);
+            } else {
+                setTimeout(function () {
+                    el.textContent = "";
+                    i = 0;
+                    setTimeout(type, 800);
+                }, 2500);
+            }
+        }
+        setTimeout(type, 400);
+    })();
 
 </script>    
 
